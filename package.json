@@ -25,7 +25,11 @@
   "author": "Ken Gorab",
   "licenses": [
     {
-      "type": "MIT"
+      "type": "MIT",
+      "url": "https://github.com/kengorab/optionals/blob/master/license-mit"
     }
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/kengorab/optionals/issues"
+  }
 }
