@@ -1,7 +1,7 @@
 {
   "name": "optionals",
   "version": "1.0.0",
-  "description": "A library inspired by scala's Option monad.",
+  "description": "A javascript (typescript) library inspired by scala's Option monad.",
   "main": "lib/index.js",
   "directories": {
     "test": "test"
