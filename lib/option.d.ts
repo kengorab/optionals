@@ -1,3 +1,4 @@
+/// <reference path="../typings/lodash/lodash.d.ts" />
 export interface Option<T> {
     get(): T;
     isEmpty(): Boolean;

@@ -1,3 +1,7 @@
+///<reference path="../typings/lodash/lodash.d.ts"/>
+
+import * as _ from 'lodash';
+
 export interface Option<T> {
     get(): T;
     isEmpty(): Boolean;
@@ -34,7 +38,7 @@ export class Some<T> implements Option<T> {
     }
 
     contains(value: T): Boolean {
-        return this.value === value;
+        return _.isEqual(this.value, value);
     }
 
     exists(predicate: (value: T) => Boolean): Boolean {
