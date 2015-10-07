@@ -41,16 +41,16 @@ This removes ambiguous if-statements and null-checks in a type-safe manner - any
 The following functions are implementations of the equivalent Scala Option functions, and they are:
   - [match](#match)
   - [get](#get)
-  - [isEmpty](#isEmpty)
-  - [isDefined](#isDefined)
+  - [isEmpty](#isempty)
+  - [isDefined](#isdefined)
   - [contains](#contains)
   - [exists](#exists)
   - [filter](#filter)
-  - [flatMap](#flatMap)
+  - [flatMap](#flatmap)
   - [map](#map)
   - [flatten](#flatten)
-  - [getOrElse](#getOrElse)
-  - [orNull](#orNull)
+  - [getOrElse](#getorelse)
+  - [orNull](#ornull)
 
 ### match
 
