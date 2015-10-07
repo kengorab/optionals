@@ -5,6 +5,9 @@ An implementation of Scala's [Option](http://www.scala-lang.org/api/current/inde
 
 [![Build Status](https://travis-ci.org/KenGorab/optionals.svg?branch=master)](https://travis-ci.org/KenGorab/optionals)
 
+## Installation
+`npm install --save optionals`
+
 _______
 
 ## Constructors
