@@ -9,6 +9,7 @@ An implementation of Scala's [Option](http://www.scala-lang.org/api/current/inde
 `npm install --save optionals`
 
 _______
+
 ## Typescript
 Typescript is awesome, and this library includes the type definition files for those who want to include it in their typescript project.
 ```typescript
