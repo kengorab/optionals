@@ -39,20 +39,23 @@ This removes ambiguous if-statements and null-checks in a type-safe manner - any
 ## The API
 
 The following functions are implementations of the equivalent Scala Option functions, and they are:
-  - match
-  - get
-  - isEmpty
-  - isDefined
-  - contains
-  - exists
-  - filter
-  - flatMap
-  - map
-  - flatten
-  - getOrElse
-  - orNull
+  - [match](#match)
+  - [get](#get)
+  - [isEmpty](#isEmpty)
+  - [isDefined](#isDefined)
+  - [contains](#contains)
+  - [exists](#exists)
+  - [filter](#filter)
+  - [flatMap](#flatMap)
+  - [map](#map)
+  - [flatten](#flatten)
+  - [getOrElse](#getOrElse)
+  - [orNull](#orNull)
 
-### `match<U>(matcher: { some: (val: T) => U, none: () => U }): U`
+### match
+
+`match<U>(matcher: { some: (val: T) => U, none: () => U }): U`
+
 You saw the `match` function used above. One of the amazing things about Scala is its [pattern matching](http://docs.scala-lang.org/tutorials/tour/pattern-matching.html), which enables code such as:
 ```scala
 val s = Some(123)
@@ -71,7 +74,9 @@ s.match({
 ```
 While this library doesn't bring full-fledged pattern matching to javascript, it offers the functionality to Options - a functionality without which they would be fairly incomplete.
 
-### `get(): T`
+### get
+
+`get(): T`
 
 Returns the option's value, undefined if the option is `None`.
 
@@ -82,7 +87,9 @@ s.get()   // 123
 let n = new None();
 n.get()  // undefined
 ```
-### `isEmpty(): Boolean`
+### isEmpty
+
+`isEmpty(): Boolean`
 
 Returns true if the option is `None`, false otherwise.
 
@@ -94,13 +101,17 @@ let n = new None();
 s.isEmpty()  // true
 ```
 
-### `isDefined(): Boolean`
+### isDefined
+
+`isDefined(): Boolean`
 
 Returns true if the option is an instance of `Some`, false otherwise.
 
 `isDefined` is the negation of `isEmpty`, so an example isn't necessary.
 
-### `contains(value: T): Boolean`
+### contains
+
+`contains(value: T): Boolean`
 
 Tests whether the option contains a given value as its element.
 
@@ -112,7 +123,9 @@ let n = new None();
 n.contains('anything');  // false
 ```
 
-### `exists(predicate: (value: T) => Boolean): Boolean`
+### exists
+
+`exists(predicate: (value: T) => Boolean): Boolean`
 
 Returns true if this option is nonempty and the predicate returns true when applied to this option's value.
 
@@ -124,7 +137,9 @@ let n = new None();
 n.exists(val => _.contains(val, 2))  // false
 ```
 
-### `filter(predicate: (value: T) => Boolean): Option<T>`
+### filter
+
+`filter(predicate: (value: T) => Boolean): Option<T>`
 
 Returns an option if it is nonempty and applying the predicate to this option's value returns true.
 
@@ -136,7 +151,9 @@ let n = new None();
 n.filter(val => _.contains(val, 2))  // new None()
 ```
 
-### `flatMap<U>(transformer: (value: T) => Option<U>): Option<U>`
+### flatMap
+
+`flatMap<U>(transformer: (value: T) => Option<U>): Option<U>`
 
 Returns the result of applying the transformer to this option's value if this option is nonempty.
 
@@ -147,7 +164,9 @@ s.flatMap(a => new Some(a[0]))  // new Some(1)
 let n = new None();
 n.flatMap(a => new Some(a[0]))  // new None()
 ```
-### `map<U>(transformer: (value: T) => U): Option<U>`
+### map
+
+`map<U>(transformer: (value: T) => U): Option<U>`
 
 Returns an option containing the result of applying the transformer to this option's value if this option is nonempty.
 
@@ -161,7 +180,9 @@ n.map(a => a[0])  // new None()
 
 In using `map` and `flatMap`, you really begin to see the power and flexibility of using Options in your code - the eliminate a lot of null-checks and allow you to perform operations on values as if you were certain you had them. Leave it up to the Option to do the resolution for you.
 
-### `flatten<U>(): Option<U>`
+### flatten
+
+`flatten<U>(): Option<U>`
 
 Collapse nested options into an option at most 1-layer deep.
 
@@ -171,7 +192,9 @@ let nested = new Some(new Some(new Some(123)));
 nested.flatten()  // new Some(123)
 ```
 
-### `getOrElse(other: T): T`
+### getOrElse
+
+`getOrElse(other: T): T`
 
 Returns the option's value if it exists, `other` if it does not.
 
@@ -181,7 +204,9 @@ let n = new None();
 s.getOrElse('default');  // 'default'
 ```
 
-### `orNull(): T`
+### orNull
+
+`orNull(): T`
 
 Returns the option's value if it exists, `null` if it does not. This is functionally equivalent to saying `getOrElse(null)`.
 
