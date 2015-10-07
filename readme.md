@@ -9,6 +9,12 @@ An implementation of Scala's [Option](http://www.scala-lang.org/api/current/inde
 `npm install --save optionals`
 
 _______
+## Typescript
+Typescript is awesome, and this library includes the type definition files for those who want to include it in their typescript project.
+```typescript
+///<reference path="../../node_modules/optionals/lib/option.d.ts"/>
+```
+
 
 ## Constructors
 An Option represents a container which holds at most 1 value; it can either hold some value, or it can hold none. As such, there are two constructors for an Option, `Some` and `None`. Use `Some` when you have a definite value, and use `None` otherwise.
