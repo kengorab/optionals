@@ -1,6 +1,6 @@
 {
   "name": "optionals",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A javascript (typescript) library inspired by scala's Option monad.",
   "main": "lib/index.js",
   "directories": {
@@ -34,8 +34,8 @@
   "bugs": {
     "url": "https://github.com/kengorab/optionals/issues"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/kengorab/optionals.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kengorab/optionals.git"
   }
 }
