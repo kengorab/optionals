@@ -13,8 +13,8 @@ declare module 'optionals' {
         getOrElse(other: T): T;
         orNull(): T;
         match<U>(matcher: {
-            some: (val: T) => U;
-            none: () => U;
+            some: (val: T) => U | void;
+            none: () => U | void;
         }): U;
     }
 
@@ -33,8 +33,8 @@ declare module 'optionals' {
         getOrElse(other: T): T;
         orNull(): T;
         match<U>(matcher: {
-            some: ((val: T) => U);
-            none: (() => U);
+            some: ((val: T) => U | void);
+            none: (() => U | void);
         }): U;
     }
 
@@ -51,8 +51,8 @@ declare module 'optionals' {
         getOrElse(other: T): T;
         orNull(): T;
         match<U>(matcher: {
-            some: ((val: T) => U);
-            none: (() => U);
+            some: ((val: T) => U | void);
+            none: (() => U | void);
         }): U;
     }
 }
